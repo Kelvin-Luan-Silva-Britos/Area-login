@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto dia 26</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!--tela de login-->
+    <main id="tela-login" class="tela">
+        <section class="painel">
+            <h1 class="marca">Meu site</h1>
+            <p class="subtitulo">Entre com seu usuário e senha para acessar sua área.</p>
+
+            <form id="form-login" novalidate>
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" name="usuario" autocomplete="username" required>
+
+                <label for="senha">Senha</label>
+                <div class="campo-senha">
+                    <input type="password" id="senha" name="senha" autocomplete="current-password" required>
+                    <button type="button" id="mostrar-senha" class="botao-texto" aria-label="Mostrar senha">Mostrar</button>
+                </div>
+
+                <label class="lembrar">
+                    <input type="checkbox" id="lembrar">Manter conectado
+                </label>
+
+                <p id="mensagem-erro" class="erro" role="alert"></p>
+
+                <button type="submit" class="botao">Entrar</button>
+            </form>
+            
+            <p class="dica">Teste com <strong>admin</strong> / <strong>1234</strong></p>
+        </section>
+    </main>
+
+     <!--Área restrita-->
+    <div id="area-restrita" class="tela oculto">
+        <header class="topo">
+            <span class="marca pequena">Meu site</span>
+            <button id="botao-sair" class="botao secundario">Sair</button>
+        </header>
+
+        <main class="conteudo">
+            <h2>Olá, <span id="nome-usuario"></span>.</h2>
+            <p>Você esta na área restrita. Coloque aqui o conteúdo que só usuários logados devem ver.</p>
+            
+            <div class="grade">
+                <article class="bloco">
+                    <h3>Perfil</h3>
+                    <p>Veja e edite suas informações pessoais.</p>
+                </article>
+                <article class="bloco">
+                    <h3>Mensagens</h3>
+                    <p>Você não tem novas mensagens.</p>
+                </article>
+                <article class="bloco">
+                    <h3>Configurações</h3>
+                    <p>Ajuste preferências da sua conta.</p>
+                </article>
+            </div>
+        </main>
+    </div>
+   <script src="script.js"></script>
+</body>
+</html>
+
